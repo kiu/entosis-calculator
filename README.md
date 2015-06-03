@@ -1,2 +1,7 @@
-# entosis-calculator
-http://entosis.501gu.de
+entosis-calculator
+=====================
+
+Entosis Calculator
+
+Website: http://entosis.501gu.de
+
