@@ -31,7 +31,7 @@
 
 	<div class="row" style="font-size:140%;">
 
-	    <div class="col-md-4 text-center">
+	    <div class="col-md-3 text-center">
 		<label>Strategic Index</label><br>
 		<button id="option-index-strategic-0" class="btn btn-default btn-sm" onclick="indexStrategic = 0; readjust();"><b>0</b></button>
 		<button id="option-index-strategic-1" class="btn btn-default btn-sm" onclick="indexStrategic = 1; readjust();"><b>1</b></button>
@@ -41,7 +41,7 @@
 		<button id="option-index-strategic-5" class="btn btn-default btn-sm" onclick="indexStrategic = 5; readjust();"><b>5</b></button>
 	    </div>
 
-	    <div class="col-md-4 text-center">
+	    <div class="col-md-3 text-center">
 		<label>Military Index</label><br>
 		<button id="option-index-military-0" class="btn btn-default btn-sm" onclick="indexMilitary = 0; readjust();"><b>0</b></button>
 		<button id="option-index-military-1" class="btn btn-default btn-sm" onclick="indexMilitary = 1; readjust();"><b>1</b></button>
@@ -51,7 +51,7 @@
 		<button id="option-index-military-5" class="btn btn-default btn-sm" onclick="indexMilitary = 5; readjust();"><b>5</b></button>
 	    </div>
 
-	    <div class="col-md-4 text-center">
+	    <div class="col-md-3 text-center">
 		<label>Industrial Index</label><br>
 		<button id="option-index-industrial-0" class="btn btn-default btn-sm" onclick="indexIndustrial = 0; readjust();"><b>0</b></button>
 		<button id="option-index-industrial-1" class="btn btn-default btn-sm" onclick="indexIndustrial = 1; readjust();"><b>1</b></button>
@@ -60,12 +60,27 @@
 		<button id="option-index-industrial-4" class="btn btn-default btn-sm" onclick="indexIndustrial = 4; readjust();"><b>4</b></button>
 		<button id="option-index-industrial-5" class="btn btn-default btn-sm" onclick="indexIndustrial = 5; readjust();"><b>5</b></button>
 	    </div>
+	    <div class="col-md-3 text-center">
+		<label>Bonus</label><br>
+		<button id="option-designated-capital" class="btn btn-default btn-sm" onclick="toggleDesignatedCapital();"><b>Designated Capital</b></button>
+	    </div>
 
 	</div>
-<br>
-<br>
+
 <hr>
-<br>
+
+	<div class="row" style="font-size:140%;">
+	    <div class="col-md-12 text-center">
+	    <label>Activity Defense Multiplier</label>
+		<input id="slider-multiplier" style="display: inline;" oninput="readjust($(this).val())" onchange="readjust($(this).val())" onkeyup="readjust($(this).val())" type="range" min="1" max="6" step="0.1">
+		    <span class="pull-left">1.0x</span>
+		    <span><b><span id="slider-multiplier-value">?.?</span></b></span>
+		    <span class="pull-right">6.0x</span>
+		</input>
+	    </div>
+	</div>
+
+<hr>
 <br>
 
 	<div class="row">
@@ -77,9 +92,6 @@
 		    <div class="panel-body text-center">
 			<h1><span id="time-station">?</span></h1>
 		    </div>
-		    <div class="panel-footer">
-			<h4 class="panel-title">Designated Capital System<span class="pull-right">N/A</span></h4>
-		    </div>
 		</div>
 	    </div>
 	    <div class="col-md-4">
@@ -88,10 +100,7 @@
 			<h3 class="panel-title"><b>Structure / Command Node</b></h3>
 		    </div>
 		    <div class="panel-body text-center">
-			<h1><span id="time-structure-1">?</span></h1>
-		    </div>
-		    <div class="panel-footer">
-			<h4 class="panel-title">Designated Capital System<span class="pull-right" id="time-structure-2">?</span></h4>
+			<h1><span id="time-structure">?</span></h1>
 		    </div>
 		</div>
 	    </div>
@@ -101,10 +110,7 @@
 			<h3 class="panel-title"><b>Vulnerability Window</b></h3>
 		    </div>
 		    <div class="panel-body text-center">
-			<h1><span id="time-vuln-1">?</span></h1>
-		    </div>
-		    <div class="panel-footer">
-			<h4 class="panel-title">Designated Capital System<span class="pull-right" id="time-vuln-2">?</span></h4>
+			<h1><span id="time-vuln">?</span></h1>
 		    </div>
 		</div>
 	    </div>
