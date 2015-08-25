@@ -78,7 +78,7 @@ function readjust(multiplier) {
     }
 
     $("#slider-multiplier-value").html(multiplier.toFixed(1) + "x");
-    $("#time-station").html(+(5.0 * multiplier).toFixed(2) + "m");
+    $("#time-station").html(+(4.0 * multiplier).toFixed(2) + "m");
     $("#time-structure").html(+(10.0 * multiplier).toFixed(2) + "m");
     $("#time-vuln").html(hourtohuman(vulnMax / multiplier));
 }
